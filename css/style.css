@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+i {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+ul {
+    padding-left: 0!important;
+}
+
+hr {
+    background-color: #464646;
+    height: 1px;
+    border: none;
+    margin: 0!important;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 85px;
+    background-color: #212121;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+.cartIcon {
+    color: white;
+}
+
+.cart {
+    position: relative;
+    color: #212121;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    color: white;
+    font-size: 16px;
+    background-color: red;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.menu-bars-static {
+    font-size: 2rem;
+    color: #fff;
+}
+
+#nav-menu {
+    background-color: #212121;
+    width: 265px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+}
+
+#nav-menu.active{
+    left: 0;
+    transition: 350ms;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    height: 60px;
+    padding: 1rem 1rem 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    height: 50%; 
+}
+
+.nav-text:hover {
+    background-color: rgba(144, 144, 144, 0.219);
+    cursor: pointer;
+}
+
+.nav-menu-items {
+    width: 100%;
+}
+
+.nav-icon {
+    padding-right: 1rem;
+    color: #909090;
+
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 0.9;
+}
+
+.logoStatic {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 0.9;
+}
+
+#navbar-toggler {
+    background-color: #212121;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#navbar-toggler a {
+    text-decoration: none;
+}
+
+.fa-bars {
+    color: #fff;
+}
+
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* products */
+
+.products{
+    padding: 6rem 0;
+}
+
+.products h2{
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--granite-gray);
+    margin-bottom: 3rem;
+}
+
+.product-item{
+    margin: 1rem 0;
+}
+
+.product-img{
+    background: var(--ghost-white);
+    padding: 3rem 0;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 60%;
+    margin: 0 auto;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+.product-img:hover img{
+    opacity: 0.8;
+}
+
+.product-content{
+    padding: 1.6rem 0;
+    text-align: center;
+}
+
+.add-to-cart-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border: none;
+    padding: 0.75rem 1.2rem;
+    font-size: 1.05rem;
+    background-color: var(--baltic-sea);
+    color: #fff;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+    opacity: 0;
+}
+
+.product-item:hover .add-to-cart-btn{
+    opacity: 1;
+}
+
+.add-to-cart-btn .fas{
+    margin-right: 0.4rem;
+}
+
+.add-to-cart-btn:hover{
+    background-color: #23272a;
+}
+
+.add-to-cart-btn:hover{
+    color: var(--fire-bush);
+}
+
+.product-name{
+    font-size: 1.3rem;
+    color: var(--baltic-sea);
+}
+
+.product-category{
+    margin:  0.8rem 0;
+    display: inline-block;
+    font-weight: 500;
+    background: var(--fire-bush);
+    color: #fff;
+    padding: 0.05rem 1.5rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+.product-price{
+    font-size: 1.15rem;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.cardButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.fa-minus {
+    color: red;
+    margin-top: 4px;
+}
+
+.fa-plus {
+    color: green;
+    margin-top: 4px;
+}
+
+.price {
+    margin-bottom: 0;
+}
+
+.quantity {
+    font-family: 'Montserrat',sans-serif;
+    font-size: large;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.homeBtn {
+    background-color: #212121;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+
+/* .cardTitle {
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.carta {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    margin: auto auto 25px auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+} */
+
+
+
+.carta {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: auto auto 25px auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+  
+.price {
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+}
+  
+.carta button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+  
+.carta button:hover {
+    opacity: 0.7;
+}
+
+.cardTitle {
+    margin-top: 8px;
+    font-size: 18px;
+}
